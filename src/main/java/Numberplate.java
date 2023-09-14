@@ -1,15 +1,20 @@
 public class Numberplate {
     Randomwrapper charGen = new Randomwrapper();
-    private final char[] Numberplate = new char[7];
+    private final char[] numberplate = new char[7];
     public Numberplate(){
-        Numberplate[0] = '[';
+        numberplate[0] = '[';
         for(int i = 1; i <6; i++){
-            Numberplate[i] = charGen.getRandomChar();
+            numberplate[i] = charGen.getRandomChar();
         }
-        Numberplate[6] = ']';
+        numberplate[6] = ']';
     }
 
     public char[] getNumberplate() {
-        return Numberplate;
+        return numberplate;
+    }
+
+    @Override
+    public String toString() {
+        return new String(numberplate);
     }
 }
