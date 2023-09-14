@@ -8,23 +8,19 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Test {
     //test1
-    Car[] cars = new Car[100];
 
-    //test2
+
+    //test2 / 3
     Radarstation blitzer = new Radarstation(30);
     Car speedingCar = new Car(60);
-
-    //test3
     Penalty pen = blitzer.control(speedingCar);
-    @BeforeEach
-    public void setup(){
-        for (int i = 0; i < cars.length; i++) {
-            cars[i] = new Car();
-        }
-    }
 
     @org.junit.jupiter.api.Test
     public void testCorrectNumberplate() {
+        Car[] cars = new Car[100];
+        for (int i = 0; i < cars.length; i++) {
+            cars[i] = new Car();
+        }
         Pattern pattern = Pattern.compile("\\[([a-z]|[0-9]){5}\\]");
         for (Car car:cars){
             String NumberplateLine = new String(car.getCarfront()[33]);
