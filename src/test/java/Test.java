@@ -15,7 +15,8 @@ public class Test {
         for (int i = 0; i < cars.length; i++) {
             cars[i] = new Car();
         }
-        Pattern pattern = Pattern.compile("\\[([a-z]|[0-9]){5}\\]");
+        //Regex Pattern für Kennzeichen (ist AIDS)
+        Pattern pattern = Pattern.compile("\\[([a-z]|[0-9]){5}]");
         for (Car car:cars){
             String NumberplateLine = new String(car.getCarfront()[33]);
             Matcher matcher = pattern.matcher(NumberplateLine);

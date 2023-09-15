@@ -3,19 +3,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Record {
-    private static Map<String, Penalty> penaltyMap = new HashMap<>();
+    private static final Map<String, Penalty> penaltyMap = new HashMap<>();
     private static Map<String, Penalty> matchedList = new HashMap<>();
 
     public static void add(String licence, Penalty pen){
         penaltyMap.put(licence, pen);
     }
 
+    //Alle Strafen printen
     public static void printAll(){
         //copy by value
         matchedList = new HashMap<>(penaltyMap);
         print();
     }
-
+    //Alle Strafen über bestimmter Geschwindigkeit printen
     public static void printAll(int v){
         for (Map.Entry<String, Penalty> entry : penaltyMap.entrySet()) {
             if (entry.getValue().getV() >= v){
@@ -24,7 +25,7 @@ public class Record {
         }
         print();
     }
-
+    //Alle Strafen in einem bestimmten Zeitraum printen
     public static void printAll(Date from, Date to){
         for (Map.Entry<String, Penalty> entry : penaltyMap.entrySet()) {
             Date date = entry.getValue().getDate();
@@ -50,13 +51,13 @@ public class Record {
         }
         return false;
     }
-
+    //Matched list printen und danach leeren
     private static void print() {
         if (checkEmpty()) return;
         for (Map.Entry<String, Penalty> entry : matchedList.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue().toString());
         }
-        matchedList.clear(); //??
+        matchedList.clear();
     }
 
 

@@ -10,6 +10,7 @@ public class Tui {
         Scanner scanner = new Scanner(System.in);
         int menu = 0;
         boolean running = true;
+        //Menuestruktur
         while (running) {
             System.out.println("*---------------------------------------------*");
             System.out.println("| 1.) Show all records                        |");

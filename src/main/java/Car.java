@@ -3,12 +3,14 @@ public class Car {
     private final char[][] carfront = new char[35][17];
     private final Numberplate numberplate = new Numberplate();
     Randomwrapper randomGen = new Randomwrapper();
+    //Auto generieren mit zufälliger Geschwindigkeit
     public Car(){
         for(int i = 0; i < 35; i++){
             for(int j = 0; j < 17; j++){
                 carfront[i][j] = randomGen.getRandomChar();
             }
         }
+        //Kennzeichen einfügen
         switch(randomGen.getRandomPosition()){
             case LEFT -> {
                 for(int i = 0; i < 7; i++){
@@ -29,7 +31,7 @@ public class Car {
         speed = randomGen.getRandomSpeed();
     }
 
-
+    //Auto mit bestimmter Geschwindigkeit generieren
     public Car(int speed){
         for(int i = 0; i < 35; i++){
             for(int j = 0; j < 17; j++){

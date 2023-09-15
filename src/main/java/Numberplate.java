@@ -1,6 +1,7 @@
 public class Numberplate {
     Randomwrapper charGen = new Randomwrapper();
     private final char[] numberplate = new char[7];
+    //Kennzeichen generieren
     public Numberplate(){
         numberplate[0] = '[';
         for(int i = 1; i <6; i++){

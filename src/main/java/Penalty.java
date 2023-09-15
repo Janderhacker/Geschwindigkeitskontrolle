@@ -13,6 +13,7 @@ public class Penalty{
     private int fine; //in €
     private int drivingBan; //in days
 
+
     public Penalty(int v, int v_max){
         this.v = v;
         int toleranz = 3;
@@ -27,7 +28,7 @@ public class Penalty{
 
         evalPenalty();
     }
-
+    // Richtige Strafe bestimmen
     private void evalPenalty(){
         this.drivingBan = 0;
         if (v_tol < 1){

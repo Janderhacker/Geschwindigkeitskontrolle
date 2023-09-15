@@ -1,5 +1,6 @@
 public class Simulate {
     public static void sim(){
+        //100 Autos simulieren und Blitzen lassen
         Car[] cars = new Car[100];
         Radarstation primarySchool = new Radarstation(30);
 
