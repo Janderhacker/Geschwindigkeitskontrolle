@@ -44,12 +44,12 @@ public class Car {
             }
             case MIDDLE -> {
                 for(int i = 0; i < 7; i++){
-                    carfront[33][i+2] = numberplate.getNumberplate()[i];
+                    carfront[33][i+4] = numberplate.getNumberplate()[i];
                 }
             }
             case RIGHT -> {
                 for(int i = 0; i < 7; i++){
-                    carfront[33][i+4] = numberplate.getNumberplate()[i];
+                    carfront[33][i+9] = numberplate.getNumberplate()[i];
                 }
             }
         }

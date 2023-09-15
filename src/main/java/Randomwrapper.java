@@ -1,3 +1,4 @@
+import java.util.Date;
 import java.util.Random;
 
 public class Randomwrapper {
@@ -30,5 +31,16 @@ public class Randomwrapper {
         else{
             return 30;
         }
+    }
+
+    public Date generateRandomDate(Date startDate, Date endDate) {
+        long startMillis = startDate.getTime();
+        long endMillis = endDate.getTime();
+
+        // Get a random time between startMillis and endMillis
+        long randomMillis = startMillis + (long) (Math.random() * (endMillis - startMillis));
+
+        // Create a new Date object from the random time
+        return new Date(randomMillis);
     }
 }

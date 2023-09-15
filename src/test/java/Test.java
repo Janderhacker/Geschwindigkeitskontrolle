@@ -1,15 +1,9 @@
-
-import org.junit.jupiter.api.*;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 public class Test {
-    //test1
-
-
     //test2 / 3
     Radarstation blitzer = new Radarstation(30);
     Car speedingCar = new Car(60);

@@ -21,7 +21,8 @@ public class Penalty{
         Calendar startDate = new GregorianCalendar(2000, Calendar.JANUARY, 1);
         Calendar endDate = new GregorianCalendar();
 
-        this.date = generateRandomDate(startDate.getTime(), endDate.getTime());
+        Randomwrapper rw = new Randomwrapper();
+        this.date = rw.generateRandomDate(startDate.getTime(), endDate.getTime());
         //this.date = new Date();
 
         evalPenalty();
@@ -70,16 +71,7 @@ public class Penalty{
         return date;
     }
 
-    public static Date generateRandomDate(Date startDate, Date endDate) {
-        long startMillis = startDate.getTime();
-        long endMillis = endDate.getTime();
 
-        // Get a random time between startMillis and endMillis
-        long randomMillis = startMillis + (long) (Math.random() * (endMillis - startMillis));
-
-        // Create a new Date object from the random time
-        return new Date(randomMillis);
-    }
 
     public int getDrivingBan() {
         return drivingBan;
